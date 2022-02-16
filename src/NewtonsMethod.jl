@@ -14,11 +14,7 @@ function newtonroot(f, f_prime; x_0, tol = 1e-7, maxiter = 1000)
         err = abs(xNew - x)
         x = xNew
     end
-    println(iter)
-    println(err)
-    if iter >= maxiter
-        return nothing
-    end
+
     return x
 end
 

@@ -9,5 +9,5 @@ end
 @testset "non convergence" begin
     f(x) = 2 + x^2
     f_prime(x) = 2x
-    newtonroot(f, f_prime; x_0 = 0) == nothing
+    @test newtonroot(f, f_prime; x_0 = 0) == nothing
 end
