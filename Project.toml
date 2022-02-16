@@ -3,6 +3,9 @@ uuid = "811bf85c-49ce-467c-b497-98996639cce0"
 authors = ["WilliamD <duanbwilliam@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+
 [compat]
 julia = "1.7"
 
