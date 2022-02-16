@@ -9,12 +9,17 @@ function newtonroot(f, f_prime; x_0, tol = 1e-7, maxiter = 1000)
     iter = 0
     x = x_0
     while err > tol && iter <= maxiter
+        if x == 0
+            x = 1e-10
+        end
         iter = iter+1
         xNew = x - f(x)/f_prime(x)
-        err = abs(xNew - x)
+        err = abs(f(x))
         x = xNew
     end
-
+    if iter > maxiter
+        return nothing
+    end
     return x
 end
 

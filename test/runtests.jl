@@ -7,7 +7,11 @@ using Test
 end
 
 @testset "non convergence" begin
-    f(x) = 2 + x^2
+    f(x) = x^2+2
     f_prime(x) = 2x
     @test newtonroot(f, f_prime; x_0 = 0) == nothing
+    @test newtonroot(f, f_prime; x_0 = 0.5) == nothing
+    @test newtonroot(f;x_0 = 0) == nothing
+    @test newtonroot(f;x_0 = 0.5) == nothing
+
 end
