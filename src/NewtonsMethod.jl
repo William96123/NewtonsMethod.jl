@@ -5,7 +5,7 @@ using ForwardDiff
 # Write your package code here.
 
 function newtonroot(f, f_prime; x_0, tol = 1e-7, maxiter = 1000)
-    err = 0
+    err = abs(f(x_0))
     iter = 0
     x = x_0
     while err > tol && iter <= maxiter
